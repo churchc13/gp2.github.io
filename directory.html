@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Directory</title>
-  <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-
+	<head>
+	<meta charset="utf-8">
+		<title>Sales By Department</title>
+		<script src="jquery-2.1.4.min.js"></script>
+		<script src="Chart.js"></script>
+		 <link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
 <div class="grid">
 
 	<div class="row">
@@ -25,29 +26,37 @@
   	</div>
 
     <br><br>
+</div>    
 
-    <div class="row">
-      <div class="col-4"> <div class="head3"><h3>Employee</h3> </div></div>
-      <div class="col-8"> <div class="head4"><h3> Contact Information</h3> </div>
-    </div>
-
-  	<div class="row">
-  		<div class="col-4"> <div class="workpic"> <img src="https://raw.githubusercontent.com/churchc13/gp1.github.io/master/images/Cory.jpeg"> </div> </div>
-  		<div class="col-8"> <div class="info"><br><br><br><br>Name: Cory Church <br>Phone Number: (252) 495-3800 <br> Email Address: churchc13@students.ecu.edu <br> Work Address: 123 E 10th Street Greenville, NC </div> </div>	
-  	</div>
-
-  	<div class="row">
-  		<div class="col-4"> <div class="workpic"> <img src="Mike.JPG"> </div></div>
-  		<div class="col-8"><div class="info"><br><br><br><br>Name: Michael Biello <br>Phone Number: (401)477-0728 <br> Email Address: biellom12@students.ecu.edu <br> Work Address: 123 E 10th Street Greenville, NC </div> </div>	
-  	</div>
-
-  	<div class="row">
-  		<div class="col-4"> <div class="workpic"><img src="https://raw.githubusercontent.com/churchc13/gp1.github.io/master/images/jimmy.jpg"> </div> </div>
-  		<div class="col-8"> <div class="info"> <br><br><br><br>Name: Jimmy Galloway <br>Phone Number: (252)555-1234 <br> Email Address: gallowayj06@students.ecu.edu <br> Work Address: 123 E 10th Street Greenville, NC </div> </div>	
-  	</div>
-
-
-</div>
-
-</body>
+		<canvas id="mycanvas" width="256" height="256">
+		<script>
+			$(document).ready(function(){
+				var ctx = $("#mycanvas").get(0).getContext("2d");
+				//pie chart data
+				//sum of values = 360
+				var data = [
+					{
+						value: 270,
+						color: "cornflowerblue",
+						highlight: "lightskyblue",
+						label: "Corn Flower Blue"
+					},
+					{
+						value: 50,
+						color: "lightgreen",
+						highlight: "yellowgreen",
+						label: "Lightgreen"
+					},
+					{
+						value: 40,
+						color: "orange",
+						highlight: "darkorange",
+						label: "Orange"
+					}
+				];
+				//draw
+				var piechart = new Chart(ctx).Pie(data);
+			});
+		</script>
+	</body>
 </html>
