@@ -1,5 +1,6 @@
 const LINE = document.getElementById("lineChart");
-let lineChart = new Chart (LINE, {
+console.log(LINE);
+let lineChart = new Chart(LINE, {
    type: 'line',
    data: { labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [
