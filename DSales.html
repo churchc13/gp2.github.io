@@ -4,37 +4,26 @@
   <meta charset="utf-8">
   <title>About Us</title>
   <link rel="stylesheet" href="css/main.css">
-  <script type="text/javascript">
+  <script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script type="text/javascript">
+
 window.onload = function () {
-	var chart = new CanvasJS.Chart("chartContainer",
-	{
+	var chart = new CanvasJS.Chart("chartContainer", {
+		theme: "theme2",
 		title:{
-			text: "Revenue by Department",
-			fontFamily: "arial black"
+			text: "Basic Column Chart - CanvasJS"              
 		},
-                animationEnabled: true,
-		legend: {
-			verticalAlign: "bottom",
-			horizontalAlign: "center"
-		},
-		theme: "theme1",
-		data: [
-		{        
+		animationEnabled: false,   // change to true
+		data: [              
+		{
 			type: "pie",
-			indexLabelFontFamily: "Garamond",       
-			indexLabelFontSize: 20,
-			indexLabelFontWeight: "bold",
-			startAngle:0,
-			indexLabelFontColor: "skyblue",       
-			indexLabelLineColor: "grey", 
-			indexLabelPlacement: "inside", 
-			toolTipContent: "{name}: {y} thousand dollars",
 			showInLegend: true,
-			indexLabel: "#percent%", 
+			legendText: "{indexLabel}",
 			dataPoints: [
-				{  y: 67, name: "Sales", legendMarkerType: "triangle"},
-				{  y: 48, name: "Services", legendMarkerType: "square"},
-				{  y: 18, name: "Other", legendMarkerType: "circle"}
+				{ y: 65, indexLabel: "Sales" },
+				{ y: 20, indexLabel: "IT" },
+				{ y: 34, indexLabel: "Services" },
+				{ y: 11, indexLabel: "Other"}
 			]
 		}
 		]
@@ -42,7 +31,6 @@ window.onload = function () {
 	chart.render();
 }
 </script>
-<script type="text/javascript" src="/assets/script/canvasjs.min.js"></script>
 </head>
 <body>
 
