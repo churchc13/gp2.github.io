@@ -31,17 +31,17 @@
  <canvas id="c" width="500" height="500"></canvas>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
   <script>
-    var ctx = document.getElementById("c").getContext("2d");
+    var ctx = document.getElementById("c").getContext("3d");
     var data = {
       labels: ["January", "February", "March", "April", "May", "June", "July"],
       datasets: [{
         label: "My First dataset",
-        fillColor: "rgba((51,51,255,0.2)",
-        strokeColor: "rgba((51,51,255,1)",
-        pointColor: "rgba((51,51,255,1)",
+        fillColor: "rgba((0,76,153,.2)",
+        strokeColor: "rgba((0,76,153,1)",
+        pointColor: "rgba((0,76,153,1)",
         pointStrokeColor: "#fff",
         pointHighlightFill: "#fff",
-        pointHighlightStroke: "rgba((51,51,255,1)",
+        pointHighlightStroke: "rgba((0,76,153,1)",
         data: [30, 45, 59, 72, 65, 80, 85]
       }]
     };
