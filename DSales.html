@@ -4,29 +4,7 @@
   <meta charset="utf-8">
   <title>About Us</title>
   <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-
-<div class="grid">
-
-  <div class="row">
-      <div class="col-12"> <div class="screenshot"> <img src="https://github.com/churchc13/gp2.github.io/blob/master/images/picture.jpeg?raw=true" alt="Photo from pixabay Creative Commons"> </div> </div>
-    </div>
-
-    <div class="row">
-      <div class="col-12"> <div class="header"> <h1>Cloud Processing Distributed</h1> </div></div>
-    </div>
-    
-    <div class="row">
-      <div class="col-3"> <div class="subhead"> <a href="index.html"> Home </a> </div> </div>
-      <div class="col-3"> <div class="subhead"> <a href="DSales.html"> Sales By Department </a> </div> </div>
-      <div class="col-3"> <div class="subhead"> <a href="YearSales.html"> Sales By Year </a> </div></div>
-      <div class="col-3"> <div class="subhead"> <a href="location.html"> Location </a> </div></div>
-    </div>
-<br> <br> 
-</div>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
-<script type="text/javascript">
+  <script type="text/javascript">
 window.onload = function () {
 	var chart = new CanvasJS.Chart("chartContainer",
 	{
@@ -50,20 +28,42 @@ window.onload = function () {
 			indexLabelFontColor: "skyblue",       
 			indexLabelLineColor: "grey", 
 			indexLabelPlacement: "inside", 
-			toolTipContent: "{name}: {y}hrs",
+			toolTipContent: "{name}: {y} thousand dollars",
 			showInLegend: true,
 			indexLabel: "#percent%", 
 			dataPoints: [
-				{  y: 52, name: "Sales", legendMarkerType: "triangle"},
-				{  y: 44, name: "Services", legendMarkerType: "square"},
-				{  y: 12, name: "Other", legendMarkerType: "circle"}
+				{  y: 67, name: "Sales", legendMarkerType: "triangle"},
+				{  y: 48, name: "Services", legendMarkerType: "square"},
+				{  y: 18, name: "Other", legendMarkerType: "circle"}
 			]
 		}
 		]
 	});
 	chart.render();
 }
-</script>  
+</script>
+<script type="text/javascript" src="/assets/script/canvasjs.min.js"></script>
+</head>
+<body>
+
+<div class="grid">
+
+  <div class="row">
+      <div class="col-12"> <div class="screenshot"> <img src="https://github.com/churchc13/gp2.github.io/blob/master/images/picture.jpeg?raw=true" alt="Photo from pixabay Creative Commons"> </div> </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12"> <div class="header"> <h1>Cloud Processing Distributed</h1> </div></div>
+    </div>
+    
+    <div class="row">
+      <div class="col-3"> <div class="subhead"> <a href="index.html"> Home </a> </div> </div>
+      <div class="col-3"> <div class="subhead"> <a href="DSales.html"> Sales By Department </a> </div> </div>
+      <div class="col-3"> <div class="subhead"> <a href="YearSales.html"> Sales By Year </a> </div></div>
+      <div class="col-3"> <div class="subhead"> <a href="location.html"> Location </a> </div></div>
+    </div>
+<br> <br> 
+</div> 
   <div id="chartContainer" style="height: 300px; width: 100%;"></div>
 </body>
 </html>
