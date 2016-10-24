@@ -33,9 +33,9 @@
   <script>
     var LineChart = document.getElementById("c").getContext("2d");
     var data = {
-      labels: ["January", "February", "March", "April", "May", "June", "July"],
+      labels: ["2010, "2011", "2012", "2013", "2014", "2015", "2016"],
       datasets: [{
-        label: "My First dataset",
+        label: "Sales",
         fillColor: "rgba(220,220,220,0.2)",
         strokeColor: "rgba(220,220,220,1)",
         pointColor: "rgba(220,220,220,1)",
@@ -45,7 +45,7 @@
         data: [65, 59, 80, 81, 56, 55, 40]
       }]
     };
-    var MyNewChart = new Chart(LineChart).Line(data);
+    var SalesByYear = new Chart(LineChart).Line(data);
   </script>
 		
 	</body>
