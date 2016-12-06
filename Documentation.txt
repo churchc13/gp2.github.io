@@ -1,5 +1,0 @@
-This website is created for a business and has information on the 
-sales revenue of that business on the second page.
-The sales revenue is presented in a chart.js chart that shows revenue by year.
-Another JavaScript element in on the locations page that is a google maps
-element that shows where our company is located.
